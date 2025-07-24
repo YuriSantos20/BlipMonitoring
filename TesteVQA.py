@@ -2,11 +2,13 @@ from transformers import BlipProcessor, BlipForQuestionAnswering
 import torch
 from PIL import Image
 import requests
+from io import BytesIO
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-img_path = r"C:\Users\Admin\Downloads\ClassificaçãoGeralEmoção-20250712T160954Z-1-001\ClassificaçãoGeralEmoção\SemDor\imagem_2.jfif"
-raw_image = Image.open(img_path).convert("RGB")
+img_url = "https://thumbs.dreamstime.com/b/velho-com-dor-nas-costas-av%C3%B4-s%C3%AAnior-lombar-fundo-branco-isolado-174152117.jpg"
+response = requests.get(img_url)
+raw_image = Image.open(BytesIO(response.content)).convert("RGB")
 
 processor = BlipProcessor.from_pretrained("Salesforce/blip-vqa-base")
 model = BlipForQuestionAnswering.from_pretrained("Salesforce/blip-vqa-base").to("cuda")
