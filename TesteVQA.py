@@ -19,5 +19,5 @@ inputs = processor(raw_image, question, return_tensors="pt").to(device)
 out = model.generate(**inputs)
 answer = processor.decode(out[0], skip_special_tokens=True)
 
-raw_image.show()  # Isso abre a imagem com o visualizador do seu sistema
+raw_image.show() 
 print(f"==> {answer}")
