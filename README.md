@@ -39,6 +39,7 @@ pip install numpy==1.24.4 opencv-python==4.8.1.78
 ### 4. Exemplo de uso
 
 No TesteVQA.py, você pode alterar a URL, caminho local da imagem e a pergunta
+No TesteITM.py, chega mais proximo da "ideia final" do projeto, mesmo sendo apenas testes
 
 ## Modelo utilizado
 
