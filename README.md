@@ -33,10 +33,12 @@ conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 cpuonly -c py
 
 pip install transformers==4.46.2
 pip install sympy==1.13.1
+pip install salesforce-lavis
+pip install numpy==1.24.4 opencv-python==4.8.1.78
 
 ### 4. Exemplo de uso
 
-No TesteVQA.py, você pode alterar a URL ou o caminho local da imagem e alterar a pergunta
+No TesteVQA.py, você pode alterar a URL, caminho local da imagem e a pergunta
 
 ## Modelo utilizado
 
